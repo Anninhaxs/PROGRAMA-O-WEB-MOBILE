@@ -1,0 +1,33 @@
+.produto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+    padding: 50px;
+    flex-grow: 1;
+}
+
+.card {
+    background-color: green;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    border-radius: 10px;
+    color: white;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: gray;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: indigo;
+}

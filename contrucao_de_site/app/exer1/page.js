@@ -1,12 +1,11 @@
-import Image from "next/image";
-import styles from "./ex1.module.css";
+import styles from "./exer1.module.css";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.frase}>
-        <h1>Primeiro exercício de CSS</h1>
-      </div>
-    </main>
-  );
+    return (
+        <main className={styles.background}>
+            <h1 className={styles.h1}>
+                Primeiro exercício de CSS
+            </h1>
+        </main>
+    );
 }
