@@ -1,4 +1,4 @@
-"use client"; // Necessário para usar o useState no Next.js App Router
+"use client";
 import { useState } from 'react';
 
 export default function Projects() {
@@ -6,12 +6,12 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Sistema de E-commerce de Artigos de Esportes",
-      category: "Python",
-      image: "/esporte.png", 
-      description: "Um projeto desenvolvido para gerenciar uma loja virtual de produtos esportivos com funcionalidades completas e dinâmicas.",
-      tags: ["Python","SQL"],
-      link: "https://github.com/LettyciaDev/PROJETO-BANCO-DE-DADOS"
+      title: "Site Para Criação de Receitas Saudáveis",
+      category: "Web",
+      image: "/caradapia.png", 
+      description: "Um projeto desenvolvido para a criação de receitas inteligentes com ingredientes que você tem disponivél no momento.",
+      tags: ["Web","CSS","React"],
+      link: "https://github.com/LettyciaDev/PROJETO-WEB-MOBILE"
     },
     {
       title: "Sistema Para Rastreamento de Animais de Rua",
@@ -46,7 +46,7 @@ export default function Projects() {
         
         {/* Filtros */}
         <div className="flex flex-wrap justify-center gap-4">
-          {['All', 'Mobile', 'Web', 'Python'].map((cat) => (
+          {['All', 'Mobile', 'Web',].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
