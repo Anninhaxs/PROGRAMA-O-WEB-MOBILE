@@ -44,7 +44,6 @@ export default function Projects() {
           Meus Projetos
         </p>
         
-        {/* Filtros */}
         <div className="flex flex-wrap justify-center gap-4">
           {['All', 'Mobile', 'Web',].map((cat) => (
             <button
@@ -62,11 +61,9 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Grid de Projetos */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500">
         {filteredProjects.map((project, index) => (
           <div key={index} className="group bg-[#0f0f0f] border border-white/5 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all shadow-2xl">
-            {/* Imagem do Projeto */}
             <div className="h-48 overflow-hidden bg-gray-900">
               <img 
                 src={project.image} 
@@ -75,14 +72,12 @@ export default function Projects() {
               />
             </div>
 
-            {/* Conteúdo do Card */}
             <div className="p-6">
               <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
               <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                 {project.description}
               </p>
-              
-              {/* Tags */}
+
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tags.map((tag, i) => (
                   <span key={i} className="text-[10px] uppercase font-bold tracking-tighter text-purple-400 px-2 py-1 bg-purple-500/10 rounded border border-purple-500/20">
@@ -91,13 +86,9 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* Botões */}
               <div className="flex items-center gap-4">
-                <a href={project.link} className="text-white bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg text-sm font-semibold transition-all">
-                  View Details
-                </a>
-                <a href={project.link} className="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-lg hover:border-purple-500 transition-all">
-                  <span className="text-white text-xs">🔗</span>
+                <a href={project.link} target="_blank" className="text-white bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg text-sm font-semibold transition-all">
+                  View Details 🔗
                 </a>
               </div>
             </div>
