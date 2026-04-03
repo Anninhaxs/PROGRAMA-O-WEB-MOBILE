@@ -37,7 +37,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="max-w-6xl mx-auto py-20 px-4">
-      {/* Cabeçalho */}
+    
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white mb-1">My Projects</h2>
         <p className="text-purple-500 text-sm font-medium uppercase tracking-widest opacity-80 mb-8">

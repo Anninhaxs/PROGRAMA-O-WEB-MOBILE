@@ -1,10 +1,8 @@
-// app/components/About.js
 export default function About() {
   return (
     <section id="about" className="max-w-6xl mx-auto py-20 px-4">
       <div className="flex flex-col md:flex-row items-center gap-16">
         
-        {/* Lado Esquerdo: Texto */}
         <div className="flex-1 text-left">
           <h2 className="text-4xl font-bold text-white mb-1">About Me</h2>
           <p className="text-purple-500 text-sm font-medium uppercase tracking-widest opacity-80 mb-10">
@@ -28,21 +26,17 @@ export default function About() {
           </div>
         </div>
 
-        {/* Lado Direito: Sua Foto (Substituindo o gato) */}
         <div className="flex-1 flex justify-center relative">
-          {/* Elementos decorativos (os X e O da imagem) */}
           <div className="absolute top-0 right-10 text-purple-500 text-2xl font-bold opacity-40 animate-pulse">×</div>
           <div className="absolute bottom-10 left-10 text-purple-500 text-4xl font-bold opacity-20 italic">○</div>
           <div className="absolute top-20 -left-5 text-purple-400 text-xl opacity-30">×</div>
 
-          {/* Container da Imagem */}
           <div className="relative group">
-             {/* Brilho roxo ao fundo */}
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-violet-900 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
             
             <img 
-              src="/foto.jpg" // Nome da imagem na pasta public
-              alt="Seu Nome"
+              src="/foto.jpg"
+              alt="Anna Beatriz"
               className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
             />
           </div>

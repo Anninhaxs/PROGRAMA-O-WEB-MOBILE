@@ -27,7 +27,7 @@ export default function Navbar() {
                        hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:scale-105
                        flex items-center gap-2 font-bold group"
           >
-            Jogar Forca 
+            Jogo da Forca 
             <span className="group-hover:animate-bounce">🎮</span>
           </Link>
         </div>

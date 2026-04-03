@@ -1,4 +1,3 @@
-// app/components/Skills.js
 export default function Skills() {
   const skills = [
     { title: "Programação", items: ["C", "Python", "Lógica de Programação", "PHP","Kotlin","Java"] },
@@ -9,7 +8,6 @@ export default function Skills() {
 
   return (
     <section id="skills" className="max-w-6xl mx-auto py-20 px-4">
-      {/* Título com a Tradução Embaixo */}
       <div className="mb-12">
         <h2 className="text-4xl font-bold text-white mb-1">
           Skills & Technologies
@@ -19,7 +17,6 @@ export default function Skills() {
         </p>
       </div>
 
-      {/* Grid de Cards - Responsivo: 1 coluna no celular, 3 no PC */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {skills.map((skill, index) => (
           <div 
@@ -30,7 +27,6 @@ export default function Skills() {
               {skill.title}
             </h3>
             
-            {/* Container das Tags */}
             <div className="flex flex-wrap gap-3">
               {skill.items.map((item, idx) => (
                 <span 

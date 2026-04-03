@@ -1,4 +1,3 @@
-// app/components/Experience.js
 export default function Experience() {
   const experiences = [
     {
@@ -23,7 +22,6 @@ export default function Experience() {
 
   return (
     <section id="experience" className="max-w-6xl mx-auto py-20 px-4">
-      {/* Título com Tradução */}
       <div className="mb-16">
         <h2 className="text-4xl font-bold text-white mb-1">Experience & Career </h2>
         <p className="text-purple-500 text-sm font-medium uppercase tracking-widest opacity-80">
@@ -35,15 +33,12 @@ export default function Experience() {
         {experiences.map((exp, index) => (
           <div key={index} className="relative pl-10">
             
-            {/* A Bolinha Roxa na Linha do Tempo */}
             <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-purple-600 border-4 border-[#050505] shadow-[0_0_10px_rgba(147,51,234,0.5)]"></div>
             
-            {/* O Ano em destaque */}
             <span className="inline-block px-3 py-1 rounded-full bg-purple-600/10 border border-purple-500/30 text-purple-400 text-xs font-bold mb-3">
               {exp.year}
             </span>
 
-            {/* Card de Experiência */}
             <div className="bg-[#0f0f0f] border border-white/5 p-6 rounded-2xl hover:border-purple-500/30 transition-all group">
               <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
                 {exp.title}
