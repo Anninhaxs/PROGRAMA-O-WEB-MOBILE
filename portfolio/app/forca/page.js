@@ -74,8 +74,8 @@ export default function Forca() {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           
-          <div className="bg-[#0f0f0f] p-10 rounded-3xl border border-white/5 flex justify-center shadow-2xl">
-            <svg width="200" height="250" className="stroke-purple-500 stroke-[4] fill-none">
+          <div className="bg-[#0f0f0f] p-4 md: p-10 rounded-3xl border border-white/5 flex justify-center shadow-2xl overflow-hidden">
+            <svg width="160" height="200" viewBox="0 0 200 250" className="stroke-purple-500 stroke-[4] fill-none scale-90 md:scale-100">
               <path d="M20 230 L100 230 M60 230 L60 20 L140 20 L140 50" stroke="#333" />
               {erros > 0 && <circle cx="140" cy="70" r="20" />}
               {erros > 1 && <line x1="140" y1="90" x2="140" y2="150" />}
@@ -103,7 +103,7 @@ export default function Forca() {
               </div>
             )}
 
-            <div className="flex flex-wrap justify-center gap-2 max-w-sm">
+            <div className="flex flex-wrap justify-center gap-1.5 md:gap-2 max-w-full md:max-w-sm px-2">
               {alfabeto.map(letra => {
                 const usada = letrasUsadas.includes(letra);
                 const correta = usada && jogo.palavra.includes(letra);
@@ -112,7 +112,7 @@ export default function Forca() {
                     key={letra}
                     onClick={() => chutarLetra(letra)}
                     disabled={usada || venceu || perdeu}
-                    className={`w-10 h-10 rounded-lg font-bold transition-all ${
+                    className={`w-8 h-8 md:w-10 md:h-10 text-xs md:text-base rounded-lg font-bold transition-all ${
                       usada 
                         ? (correta ? 'bg-purple-600 text-white' : 'bg-gray-800 text-gray-600 opacity-50')
                         : 'bg-[#1a1a1a] hover:bg-purple-500/20 border border-white/10 text-white'

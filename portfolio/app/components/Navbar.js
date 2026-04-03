@@ -1,34 +1,28 @@
+// app/components/Navbar.js
 import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#050505]/80 backdrop-blur-md border-b border-white/5">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#050505]/90 backdrop-blur-md border-b border-white/5">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
         
-        <Link href="/" className="text-white font-bold text-xl tracking-tighter cursor-pointer">
+        {/* Logo */}
+        <Link href="/" className="text-white font-bold text-xl tracking-tighter">
           Anna <span className="text-purple-500 font-light">Beatriz</span>
         </Link>
 
-        <div className="hidden md:flex gap-8 items-center text-sm font-medium uppercase tracking-widest text-gray-400">
-          <Link href="/#about" className="hover:text-purple-500 transition-colors duration-300">
-            About
-          </Link>
-          <Link href="/#projects" className="hover:text-purple-500 transition-colors duration-300">
-            Projects
-          </Link>
-          <Link href="/#contact" className="hover:text-purple-500 transition-colors duration-300">
-            Contact
-          </Link>
+        {/* Links de Navegação - Agora visíveis no Mobile também */}
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 items-center text-[10px] md:text-sm font-medium uppercase tracking-widest text-gray-400">
+          <Link href="/#about" className="hover:text-purple-500 transition-colors">About</Link>
+          <Link href="/#projects" className="hover:text-purple-500 transition-colors">Projects</Link>
+          <Link href="/#contact" className="hover:text-purple-500 transition-colors">Contact</Link>
 
+          {/* Botão do Jogo menor no celular */}
           <Link 
             href="/forca" 
-            className="px-5 py-2.5 bg-purple-600/10 border border-purple-500/50 text-purple-400 rounded-xl 
-                       hover:bg-purple-600 hover:text-white transition-all duration-500 
-                       hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:scale-105
-                       flex items-center gap-2 font-bold group"
+            className="px-3 py-1.5 md:px-5 md:py-2.5 bg-purple-600 text-white md:bg-purple-600/10 md:text-purple-400 border border-purple-500/50 rounded-lg hover:bg-purple-600 hover:text-white transition-all text-[10px] md:text-xs font-bold"
           >
-            Jogo da Forca 
-            <span className="group-hover:animate-bounce">🎮</span>
+            JOGAR 🎮
           </Link>
         </div>
       </div>
